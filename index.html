@@ -5,130 +5,212 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>이재국 | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Pretendard', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: #0f172a;
     color: white;
-    text-align: center;
+    line-height: 1.6;
 }
 
-header {
-    padding: 100px 20px;
-}
-
-h1 {
-    font-size: 60px;
-    letter-spacing: 3px;
-    animation: fadeIn 2s ease-in-out;
+/* 공통 */
+section {
+    padding: 100px 10%;
 }
 
 h2 {
-    margin-top: 20px;
-    font-weight: 300;
-    color: #00eaff;
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-section {
-    padding: 80px 20px;
-}
-
-.card-container {
+/* Hero */
+.hero {
+    height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #38bdf8;
+}
+
+.hero button {
     margin-top: 40px;
-}
-
-.card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    padding: 30px;
-    width: 280px;
-    border-radius: 20px;
-    transition: 0.4s;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    background: rgba(0, 234, 255, 0.2);
-}
-
-button {
-    margin-top: 30px;
     padding: 12px 30px;
-    border: none;
     border-radius: 30px;
-    background: #00eaff;
+    border: none;
+    background: #38bdf8;
     color: black;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 
-button:hover {
+.hero button:hover {
     background: white;
 }
 
-footer {
-    padding: 40px;
-    background: rgba(0,0,0,0.4);
-    margin-top: 60px;
+/* About */
+.about {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    color: #cbd5e1;
 }
 
-@keyframes fadeIn {
-    from {opacity: 0; transform: translateY(-20px);}
-    to {opacity: 1; transform: translateY(0);}
+/* Skills */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    background: #1e293b;
+    padding: 15px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #38bdf8;
+    color: black;
+}
+
+/* Projects */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background: #334155;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+}
+
+.contact a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #020617;
+    color: #94a3b8;
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<!-- 1. Hero -->
+<section class="hero">
     <h1>이재국</h1>
-    <h2>Web Developer · Creator · Builder</h2>
-    <button onclick="scrollToSection()">프로젝트 보기</button>
-</header>
+    <p>Web Developer · Business Analyzer · Builder</p>
+    <button onclick="document.getElementById('about').scrollIntoView()">더 알아보기</button>
+</section>
 
-<section id="projects">
-    <h2>My Projects</h2>
+<!-- 2. About Me -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="about">
+        <p>
+        안녕하세요. 웹 개발과 사업 분석에 관심이 있는 이재국입니다.
+        HTML, CSS, JavaScript 기반 웹 제작과 Python 서버 개발을 공부하고 있으며
+        실제 수익 구조와 비즈니스 모델 분석에도 관심이 있습니다.
+        </p>
+    </div>
+</section>
 
-    <div class="card-container">
-        <div class="card">
-            <h3>홈페이지 제작</h3>
-            <p>HTML, CSS, JavaScript 기반 웹사이트 제작</p>
+<!-- 3. Skills -->
+<section>
+    <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">Flask</div>
+        <div class="skill">GitHub</div>
+    </div>
+</section>
+
+<!-- 4. Projects -->
+<section>
+    <h2>Projects</h2>
+    <div class="projects-container">
+        <div class="project-card">
+            <h3>개인 홈페이지 제작</h3>
+            <p>GitHub Pages 기반 정적 웹사이트 제작</p>
         </div>
-
-        <div class="card">
-            <h3>Python 웹서버</h3>
-            <p>Flask 기반 서버 및 DB 연동 프로젝트</p>
+        <div class="project-card">
+            <h3>Python 웹 서버</h3>
+            <p>Flask + DB 연동 웹 애플리케이션 개발</p>
         </div>
-
-        <div class="card">
-            <h3>창업 분석</h3>
-            <p>PC방 / 프랜차이즈 수익성 분석</p>
+        <div class="project-card">
+            <h3>창업 수익 분석</h3>
+            <p>PC방 및 프랜차이즈 수익 구조 데이터 분석</p>
         </div>
     </div>
 </section>
 
-<footer>
-    <p>© 2026 이재국 | GitHub Portfolio</p>
-</footer>
+<!-- 5. Contact -->
+<section>
+    <h2>Contact</h2>
+    <div class="contact">
+        <p>협업 및 문의는 아래로 연락주세요.</p>
+        <a href="mailto:your@email.com">이메일 보내기</a>
+    </div>
+</section>
 
-<script>
-function scrollToSection() {
-    document.getElementById("projects").scrollIntoView({behavior: "smooth"});
-}
-</script>
+<footer>
+    © 2026 이재국 | GitHub Portfolio
+</footer>
 
 </body>
 </html>

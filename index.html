@@ -1,11 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>My Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이재국 | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 100px 20px;
+}
+
+h1 {
+    font-size: 60px;
+    letter-spacing: 3px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    margin-top: 20px;
+    font-weight: 300;
+    color: #00eaff;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    width: 280px;
+    border-radius: 20px;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(0, 234, 255, 0.2);
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #00eaff;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+}
+
+footer {
+    padding: 40px;
+    background: rgba(0,0,0,0.4);
+    margin-top: 60px;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+</style>
 </head>
+
 <body>
-  <h1>안녕하세요 👋</h1>
-  <p>제 GitHub 개인 홈페이지입니다.</p>
+
+<header>
+    <h1>이재국</h1>
+    <h2>Web Developer · Creator · Builder</h2>
+    <button onclick="scrollToSection()">프로젝트 보기</button>
+</header>
+
+<section id="projects">
+    <h2>My Projects</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>홈페이지 제작</h3>
+            <p>HTML, CSS, JavaScript 기반 웹사이트 제작</p>
+        </div>
+
+        <div class="card">
+            <h3>Python 웹서버</h3>
+            <p>Flask 기반 서버 및 DB 연동 프로젝트</p>
+        </div>
+
+        <div class="card">
+            <h3>창업 분석</h3>
+            <p>PC방 / 프랜차이즈 수익성 분석</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 이재국 | GitHub Portfolio</p>
+</footer>
+
+<script>
+function scrollToSection() {
+    document.getElementById("projects").scrollIntoView({behavior: "smooth"});
+}
+</script>
+
 </body>
 </html>

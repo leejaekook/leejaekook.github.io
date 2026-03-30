@@ -1,59 +1,68 @@
-/* 기본 설정 */
-body {
+
+dy {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #333;
-    text-align: center;
-}
+        font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+                color: #333;
+                    text-align: center;
+                    }
 
-/* 헤더 */
-header {
-    background-color: #222;
-    color: white;
-    padding: 40px 20px;
-}
+                    header {
+                        background-color: #4CAF50;
+                            color: white;
+                                padding: 40px 20px;
+                                }
 
-header h1 {
-    margin: 0;
-    font-size: 40px;
-}
+                                section {
+                                    padding: 40px 20px;
+                                    }
 
-header p {
-    margin-top: 10px;
-    font-size: 18px;
-    opacity: 0.8;
-}
+                                    h2 {
+                                        margin-bottom: 20px;
+                                        }
 
-/* 섹션 공통 */
-section {
-    padding: 50px 20px;
-}
+                                        ul {
+                                            list-style: none;
+                                                padding: 0;
+                                                }
 
-section h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-}
+                                                li {
+                                                    background: #ddd;
+                                                        margin: 10px auto;
+                                                            padding: 10px;
+                                                                width: 200px;
+                                                                    border-radius: 5px;
+                                                                    }
 
-/* 스킬 리스트 */
-.skills ul {
-    list-style: none;
-    padding: 0;
-}
+                                                                    button {
+                                                                        padding: 10px 15px;
+                                                                            border: none;
+                                                                                background: black;
+                                                                                    color: white;
+                                                                                        cursor: pointer;
+                                                                                            border-radius: 5px;
+                                                                                            }
 
-.skills li {
-    background: white;
-    margin: 10px auto;
-    padding: 10px;
-    width: 200px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
+                                                                                            button:hover {
+                                                                                                opacity: 0.8;
+                                                                                                }
 
-/* 푸터 */
-footer {
-    background-color: #222;
-    color: white;
-    padding: 20px;
-    font-size: 14px;
-}
+                                                                                                footer {
+                                                                                                    background: #222;
+                                                                                                        color: white;
+                                                                                                            padding: 20px;
+                                                                                                            }
+
+                                                                                                            /* 다크모드 */
+                                                                                                            .dark {
+                                                                                                                background-color: #121212;
+                                                                                                                    color: white;
+                                                                                                                    }
+
+                                                                                                                    .dark header {
+                                                                                                                        background-color: #222;
+                                                                                                                        }
+
+                                                                                                                        .dark li {
+                                                                                                                            background: #333;
+                                                                                                                            }
